@@ -19,6 +19,8 @@ klijent *klijenti;
 int n;
 
 void generiranje() {
+
+
     cout << "Koliko cetvorki treba generirati: ";
     cin >> n;
     klijenti = new klijent[n];
@@ -36,9 +38,12 @@ void generiranje() {
             klijenti[i].transakcija = rand() % 4 + 1;
         }
     }
+
 }
 
 void svi_klijenti() {
+
+
     klijent clients[20];
 
     clients[0].ulazak = 1; 
@@ -290,9 +295,12 @@ void svi_klijenti() {
             cout << clients[i].ime << "(" << clients[i].devizni << ")" << endl;
         }
     }
+
 }
 
 void brzi_red() {
+
+
     klijent clients[20];
 
     clients[0].ulazak = 1; 
@@ -513,9 +521,12 @@ void brzi_red() {
     cout << "Red za transakciju placanja racuna: " << endl;
     PrintQ(&brzi_red);
     
+    
 }
 
 void brisanje() {
+
+
     klijent clients[20];
 
     clients[0].ulazak = 1; 
@@ -729,9 +740,12 @@ void brisanje() {
     cout << "Red nakon izbacivanja:" << endl;
     PrintQ(&spori_red);
 
+
 }
     
 void rekurzija(queue *ulazak, queue*trajanje, int brojac) {
+
+
     if (brojac == 20) {
         return;
     }
@@ -755,6 +769,8 @@ void rekurzija(queue *ulazak, queue*trajanje, int brojac) {
 }
 
 void novi_salter() {
+
+
     klijent clients[20];
 
     clients[0].ulazak = 1; 
@@ -957,6 +973,7 @@ void novi_salter() {
     cout << "Novi red: " << endl;
     PrintQ(&novi_red);
 
+
 }
 
 
@@ -1013,4 +1030,5 @@ int main() {
    
     system ("pause");
     return 0;
+
 }
